@@ -1,0 +1,128 @@
+/* src/components/Home.css */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .home {
+    text-align: center;
+    color: #e0e0e0;
+  }
+  
+  .hero {
+    background: linear-gradient(45deg, #6d5dfc, #00d4ff);
+    color: white;
+    padding: 100px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .hero-content {
+    text-shadow: 1px 1px 2px black;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+    /* animation-delay: 0.5s; */
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+  }
+  
+  .hero button {
+    background: linear-gradient(45deg, #00d4ff, #6d5dfc);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+  }
+  
+  .hero button:hover {
+    background: linear-gradient(45deg, #6d5dfc, #00d4ff);
+  }
+  
+  .projects {
+    text-shadow: 1px 1px 2px #00d4ff;
+    padding: 60px 20px;
+    background-color: #1e1e2f;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #00d4ff;
+  }
+  
+  .project-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    animation-delay: 0.5s;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    width: 300px;
+    margin: 10px;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .card h3 {
+    color: #00d4ff;
+    margin-bottom: 10px;
+    animation-delay: 0.5s;
+  }
+  
+  .card p {
+    color: #e0e0e0;
+  }
+  
+  @media (max-width: 768px) {
+    header nav ul {
+      flex-direction: column;
+    }
+  
+    header nav ul li {
+      margin: 10px 0;
+    }
+  
+    footer {
+      padding: 15px 0;
+    }
+  
+    main {
+      padding: 60px 10px 80px;
+    }
+  }
+  
