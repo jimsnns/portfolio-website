@@ -1,0 +1,122 @@
+.container-tabs {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 800;
+    height: auto;
+    background:#1e1e2f;
+    margin-top: 100;
+    margin: 100px auto;
+    word-break: break-all;
+    /* border: 1px solid rgba(0, 0, 0, 0.274); */
+    font-family: 'Courier New', Courier, monospace;
+    /* box-shadow: 10px 10px 10px #1cfdff; */
+    border-radius: 30px;
+}
+
+.container-hover {
+    box-shadow: 10px 10px 10px #6093c2;
+}
+
+.bloc-tabs {
+    display: flex;
+
+}
+
+.tabs {
+    padding: 10px 20px;
+    text-align: center;
+    width: 100%;
+    background: rgba(128, 128, 128, 0.075);
+    cursor: pointer;
+    box-sizing: content-box;
+    border: 1px solid #ccc;
+    position: relative;
+    outline: none;
+    margin: 0 1px 1px;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+    box-shadow: 1px 5px 10px #1cfdff;
+    animation: fadeIn 500ms ease-in-out;
+    font-size: 20px;
+    }
+
+
+.tabs:hover {
+    transform: scale(1.01);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   }
+      
+
+.tabs:not(:last-child){
+    border-right: 1px solid white;
+}
+
+.active-tabs{
+    background: linear-gradient(45deg, #6d5dfc, #00d4ff);
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ισχυρότερη σκίαση για το ενεργό tab */
+    /* border: 1px solid #333; */
+}
+
+.content-tabs{
+    flex-grow: 1;
+    width: 100%;
+}
+
+.content{
+    /* background-image: linear-gradient(to top right, #c339f8,#6093c2); */
+    background: linear-gradient(45deg, #6d5dfc, #00d4ff);
+    padding: 20px;
+    width: auto;
+    height: 100%;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 1px 5px 10px #1cfdff;
+    position: center;
+    box-sizing: content-box;
+    text-align: left;
+    animation: fadeIn 500ms ease-in-out;
+}
+
+.content h2{
+    padding: 0px 0px 5px 0px;
+}
+
+.content hr{
+    width:100px;
+    height: 2px;
+    background: #222;
+    position: left;
+    /* margin-bottom: 5px; */
+    font-size: 30px;
+    font-weight: bold ;
+    text-align: left;
+    font-family: 'Poppins', sans-serif; 
+}
+
+.content p{
+    width: 100%;
+    height: 100%;
+}
+
+.active-content{
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+    
+}
+
+hr {
+    border: none;
+    border-top: 10px ;
+    margin-bottom: 40px;
+  }
+  
+  hr::after {
+    background: #fff;
+    /* content: '§'; */
+    /* padding: 0 4px; */
+    position: relative;
+    margin: 1000px;
+  }
+  

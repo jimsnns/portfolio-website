@@ -1,5 +1,5 @@
 // src/App.js
-import React from 'react';
+import React, {Component} from 'react';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About';
@@ -7,28 +7,37 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import './App.css';
 
+function handleClick()
+{
+     window.open("/CV_Dimitris Sinanis_1.pdf","_blank");
+     return true;
+}
+
 function App() {
   return (
     <Router>
       <div>
         <header>
           <div className="header-content">
-            <div className="logo">
-              D. S
-            </div>
+            <span className="logo">
+              Dimitris Sinanis
+            </span>
             <nav>
               <ul>
                 <li>
-                  <Link to="/">Home</Link>
+                  <Link to="/" className="nav_menu">01. Home</Link>
                 </li>
                 <li>
-                  <Link to="/about">About</Link>
+                  <Link to="/about" className="nav_menu">02. About</Link>
                 </li>
                 <li>
-                  <Link to="/projects">Projects</Link>
+                  <Link to="/projects" className="nav_menu">03. Projects</Link>
                 </li>
                 <li>
-                  <Link to="/contact">Contact</Link>
+                  <Link to="/contact" className="nav_menu">04. Contact</Link>
+                </li>
+                <li>
+                  <button className='button' onClick={handleClick}>Resume</button>
                 </li>
               </ul>
             </nav>
@@ -49,5 +58,6 @@ function App() {
     </Router>
   );
 }
+
 
 export default App;
