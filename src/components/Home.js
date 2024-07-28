@@ -8,7 +8,7 @@ function Home() {
     <div className="home">
       {/* <section className="hero"> */}
         <div className="hero-content">
-          <div className="container">
+          <div className="container-welcome">
             <div></div>
             <img src="/profile-picture.jpeg" className="profile-picture"  />
 		        <div className="intro">

@@ -1,0 +1,121 @@
+/* Εξασφαλίζει την εφαρμογή του δικού σας στυλ πάνω από το LinkedIn badge */
+
+.about-container .linkedin-badge-container .badge-base {
+    display: inline-block;
+    /* Ειδικό styling για το badge */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: #1e1e2f;
+    border-radius: 8px;
+    /* Μπορείτε να αλλάξετε το χρώμα του περιγράμματος αν θέλετε */
+    border: 2px solid #e0e0e0;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Προσθέστε εφέ hover για το badge */
+  .about-container .linkedin-badge-container .badge-base:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Στοχεύστε το link μέσα στο badge για να προσαρμόσετε το στυλ του */
+  .about-container .linkedin-badge-container .badge-base__link {
+    font-weight: bold;
+    color: #0077b5; /* Χρώμα LinkedIn */
+    text-decoration: none;
+  }
+  
+  /* Προσαρμόστε το στυλ του link όταν το ποντίκι περνάει από πάνω του */
+  .about-container .linkedin-badge-container .badge-base__link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Εξασφαλίστε ότι το γενικό στυλ του iframe δεν αλλάζει */
+  .about-container .linkedin-badge-container iframe {
+    width: 100%;
+    height: auto;
+    border: none; /* Αφαιρέστε το default border */
+  }
+  
+  .about-container {
+    margin: 20px;
+    padding: 20px;
+    background-color: #1e1e2f;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 5px 10px #1cfdff;
+  }
+  
+  .linkedin-badge-container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .linkedin-badge-container .badge-base {
+    width: 100%;
+    max-width: 400px; /* Όριο στο μέγεθος */
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .linkedin-badge-container .badge-base__link {
+    font-weight: bold;
+    color: #0077b5; /* Χρώμα LinkedIn */
+    text-decoration: none;
+  }
+  
+  .linkedin-badge-container .badge-base__link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Άλλα στοιχεία στη σελίδα σας */
+  /* .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+  } */
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+  }
+  
+  nav ul li {
+    margin: 0;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  /* .button {
+    background-color: #0077b5;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  } */
+  
+  .button:hover {
+    background-color: #005fa3;
+  }
+  
+
+  

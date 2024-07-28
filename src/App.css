@@ -166,7 +166,7 @@ button:hover {
   background: linear-gradient(45deg, #00d4ff, #6d5dfc);
 }
 
-.container {
+.container-welcome {
   background: rgba(255, 255, 255, 0.1);
   padding: 20px;
   border-radius: 10px;
@@ -218,4 +218,7 @@ button:hover {
   main {
     padding: 60px 10px 80px;
   }
+
+  
 }
+

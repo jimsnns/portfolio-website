@@ -1,0 +1,104 @@
+/* .custom-linkedin-badge {
+    width: 640;
+    height: 640;
+    align-items: center;
+    border: 1px solid #0077b5;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: lightgray;
+    transition: box-shadow 0.3s ease;
+    text-decoration: none;
+    color: #000;
+    size: 100px;
+  }
+   */
+   .custom-linkedin-badge {
+    width: 240px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border: 2px solid #0077b5; /* LinkedIn blue */
+    border-radius: 8px;
+    background-color: #f3f3f3;
+    transition: box-shadow 0.3s ease;
+    text-decoration: none;
+    color: #000;
+    overflow: hidden; /* Ensures the banner doesn't overflow the container */
+    position: relative;
+  }
+  
+  .badge-banner {
+    width: 100%;
+    height: 40px; /* Set height for the banner */
+    background-color: #0077b5; /* LinkedIn blue for the banner */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+  }
+  
+  .linkedin-icon {
+    margin-right: 5px; /* Space between icon and text */
+  }
+  
+  .banner-text {
+    color: #ffffff; /* White text color */
+    font-size: 0.9em;
+    font-weight: bold;
+  }
+  
+  .linkedin-link {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-left: 10px;
+    justify-content: center;
+    margin-top: 45px; /* Adjust margin to prevent overlap with the banner */
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit color to prevent default link color */
+  }
+  
+  .profile-picture-linkedin {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .badge-details h2 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: #0077b5;
+    text-align: left;
+  }
+  
+  .badge-details p {
+    margin: 10px 0;
+    font-size: 0.8em;
+    color: #555;
+    text-align: left;
+  }
+  
+  .custom-linkedin-badge:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.01);
+  }
+  
+  @media (max-width: 768px) {
+    .custom-linkedin-badge {
+      width: 140px;
+      height: 140px;
+    }
+    .badge-banner {
+      height: 30px;
+    }
+    .profile-picture {
+      width: 70px;
+      height: 70px;
+    }
+  }
