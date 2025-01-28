@@ -1,5 +1,6 @@
 // src/components/Contact.js
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import './Contact.css';
 
 function Contact() {
@@ -9,6 +10,8 @@ function Contact() {
     message: ''
   });
 
+  const [status, setStatus] = useState('');
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -16,10 +19,25 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log('Form submitted:', formData);
-    // Reset the form after submission
-    setFormData({ name: '', email: '', message: '' });
+    setStatus('Αποστολή...');
+
+    emailjs.send(
+      process.env.REACT_APP_EMAILJS_SERVICE_ID,
+      process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+      {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+      },
+      process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+    )
+    .then((response) => {
+      setStatus('Το μήνυμα στάλθηκε επιτυχώς! ');
+      setFormData({ name: '', email: '', message: '' });
+    })
+    .catch((error) => {
+      setStatus('Υπήρξε ένα σφάλμα. Παρακαλώ δοκιμάστε ξανά.');
+    });
   };
 
   return (
@@ -59,6 +77,14 @@ function Contact() {
           />
         </div>
         <button type="submit">Send Message</button>
+        {status && (
+          <div className="status-message">
+            {status}
+            {status === 'Το μήνυμα στάλθηκε επιτυχώς! ' && (
+              <i className="fas fa-check-circle success-icon"></i>
+            )}
+          </div>
+        )}
       </form>
     </div>
   );

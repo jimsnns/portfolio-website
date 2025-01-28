@@ -24,7 +24,7 @@ header {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif; 
   color:white;
   margin: 0;
 }
@@ -62,8 +62,7 @@ h1, h2, h3, h4, h5, h6 {
 .logo {
   margin-left: 20px;
   font-weight: bold;
-  font-family: 'Papyrus', fantasy;
-  /* font-family: 'Poppins', sans-serif;  */
+  font-family: 'Poppins', sans-serif; 
   font-size: 30px;
   color: white;
   /* text-align: left; */
@@ -72,9 +71,9 @@ h1, h2, h3, h4, h5, h6 {
 .nav_menu {
   margin-left: 0px;
   font-weight: bold;
-  font-family: 'Papyrus', fantasy;
-  /* font-family: 'Poppins', sans-serif;  */
-  font-size: 20px;
+
+  font-family: 'Poppins', sans-serif; 
+  font-size: 18px;
   color: white;
   /* text-align: left; */
 }
@@ -85,7 +84,7 @@ header nav ul {
   margin: 0;
   display: flex;
   justify-content: center;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif; 
 }
 
 header nav ul li {
@@ -98,7 +97,7 @@ header nav ul li a {
   font-weight: bold;
   position: relative;
   transition: color 0.3s ease;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif; 
 }
 
 header nav ul li a::before {
@@ -112,7 +111,7 @@ header nav ul li a::before {
   visibility: hidden;
   transform: scaleX(0);
   transition: all 0.3s ease-in-out;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif; 
 }
 
 header nav ul li a:hover::before {
@@ -124,12 +123,13 @@ footer {
   background: linear-gradient(45deg, #6d5dfc, #00d4ff);
   color: white;
   text-align: center;
-  padding: 20px 0;
+  padding: 2px 0;
   position: fixed;
   width: 100%;
   bottom: 0;
   box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: 'Poppins', sans-serif; 
 }
 
 main {
@@ -150,21 +150,45 @@ p {
 button { 
   background: linear-gradient(45deg, #6d5dfc, #00d4ff);
   color: white;
-  /* border-style: line;
-  border-color: gray; */
   border: 1px solid #ccc;
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 40px;
   transition: background 0.5s ease;
-  font-family: 'Papyrus', fantasy;
+  font-family: 'Poppins', sans-serif; 
   font-weight: bold;
   font-size: 15px; 
-}
+} 
 
 button:hover {
   background: linear-gradient(45deg, #00d4ff, #6d5dfc);
 }
+
+
+
+button:hover {
+  background: linear-gradient(90deg, #2563eb, #3b82f6);
+  transform: scale(1.05);
+}
+
+.resume-button {
+  background: none;
+  border: 1px solid white;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif; 
+
+}
+
+.resume-button:hover {
+  box-shadow: 0px 0px 15px #3b82f6;
+  background: #3b82f6;
+  color: white;
+}
+
+
 
 .container-welcome {
   background: rgba(255, 255, 255, 0.1);

@@ -21,7 +21,18 @@ function About() {
   
     <div className="about-container">
       <h1>About Me</h1>
-      <p>You can find me on .</p>
+      <p>Hello! I'm Dimitris Sinanis, a creative Software Engineer with a passion for developing applications and 
+        websites that improve the user experience. I specialize in developing dynamic websites using React, 
+        JavaScript, and CSS, and have experience creating responsive designs that meet the needs of every user.</p>
+      <p>I have worked with various clients to create modern websites and applications, and I always strive 
+      to provide solutions that combine functionality and aesthetics. I believe in creating clean and 
+      pleasant user experiences, and I always work to ensure the excellent quality and efficiency of 
+      my projects.</p>
+
+      <p>When I'm not coding, I like to explore new places, read books or articles about technology, 
+        and watch science fiction movies.</p>
+
+      <p>If you'd like to collaborate or just discuss more about my work, feel free to contact me via LinkedIn or the contact form.</p>
       <div className="App">
         
       <CustomLinkedInBadge />

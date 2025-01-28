@@ -23,7 +23,7 @@ const CustomLinkedInBadge = () => {
         />
         <div className="badge-details">
           <h2>Dimitris Sinanis</h2>
-          <p>Software Support Engineer at Qualco</p>
+          <p>Associate Full Stack Software Engineer | Intelligent Decisions at Qualco</p>
           <p>QUALCO | Piraeus University of Applied Sciences</p>
         </div>
       </a>

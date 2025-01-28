@@ -1,17 +1,24 @@
 .contact {
     max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #2b2b3d;
-    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     color: #e0e0e0;
+    animation: fadeIn 500ms ease-in-out;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #1e1e2f;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 5px 10px #1cfdff;
+    font-family: 'Poppins', sans-serif; 
   }
   
   .contact h2 {
     text-align: center;
     margin-bottom: 20px;
     color: #00d4ff;
+    animation: fadeIn 500ms ease-in-out;
   }
   
   .form-group {
@@ -24,6 +31,7 @@
     margin-bottom: 10px;
     font-weight: bold;
     color: #ffffff;
+    animation: fadeIn 500ms ease-in-out;
   }
   
   .form-group input,
@@ -35,6 +43,7 @@
     background-color: #444;
     color: #ffffff;
     font-size: 1rem;
+    animation: fadeIn 500ms ease-in-out;
   }
   
   .form-group textarea {
@@ -53,9 +62,26 @@
     cursor: pointer;
     font-size: 1.1rem;
     transition: background-color 0.3s ease;
+    animation: fadeIn 500ms ease-in-out;
   }
   
   button[type='submit']:hover {
     background-color: #00aacc;
+  }
+  
+  .status-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    line-height: 3;
+    animation: fadeIn 500ms ease-in-out;
+  }
+  
+  .success-icon {
+    color: #4CAF50;
+    margin-left: 8px;
+    font-size: 1.2em;
+    animation: fadeIn 500ms ease-in-out;
   }
   

@@ -1,5 +1,5 @@
 // src/App.js
-import React, {Component} from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About';
@@ -37,7 +37,7 @@ function App() {
                   <Link to="/contact" className="nav_menu">04. Contact</Link>
                 </li>
                 <li>
-                  <button className='button' onClick={handleClick}>Resume</button>
+                  <button className='resume-button' onClick={handleClick}>Resume</button>
                 </li>
               </ul>
             </nav>
@@ -52,7 +52,7 @@ function App() {
           </Routes>
         </main>
         <footer>
-          <p>&copy; 2024 Dimitris Sinanis. All rights reserved.</p>
+          <p>&copy; 2025 Dimitris Sinanis. All rights reserved.</p>
         </footer>
       </div>
     </Router>

@@ -15,7 +15,7 @@ function Home() {
 			        {/* <img src="images/profile-picture.jpg" /> */}
 			        
               <span className='welcome'>Welcome.</span>
-              <p className='paragraph'>Hello! I'm Dimitris, a passionate Software Support Engineer currently working at Qualco. </p>
+              <p className='paragraph'>Hello! I'm Dimitris, a passionate Software Engineer currently working at Qualco. </p>
               <p className='paragraph'>With a strong background in SQL, C#, and Python, 
                 I specialize in developing robust in resolving complex issues and develop efficient software solutions. 
                 My commitment to continuous learning and improvement drives me to stay updated with the latest industry trends and technologies.</p>
