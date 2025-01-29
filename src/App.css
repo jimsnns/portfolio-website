@@ -18,22 +18,27 @@ body {
 header {
   background: linear-gradient(45deg, #6d5dfc, #00d4ff);
   color: white;
-  padding: 20px 0;
+  padding: 10px 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', sans-serif; 
   color:white;
   margin: 0;
+  text-align: center;
 }
 
 .header-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  width: 60%;
+  width: 100%;
   margin: 0 auto; /* Center the content */
 }
 
@@ -69,9 +74,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav_menu {
-  margin-left: 0px;
+  /* margin-left: 0px; */
   font-weight: bold;
-
+  display: flex;
+  justify-content: center; /* Στοίχιση στο κέντρο οριζόντια */
+  align-items: center; /* Στοίχιση στο κέντρο κάθετα */
   font-family: 'Poppins', sans-serif; 
   font-size: 18px;
   color: white;
@@ -85,10 +92,16 @@ header nav ul {
   display: flex;
   justify-content: center;
   font-family: 'Poppins', sans-serif; 
+  
 }
 
 header nav ul li {
-  margin: 0 30px;
+  margin: 0 35px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
 }
 
 header nav ul li a {
@@ -98,6 +111,7 @@ header nav ul li a {
   position: relative;
   transition: color 0.3s ease;
   font-family: 'Poppins', sans-serif; 
+  
 }
 
 header nav ul li a::before {
@@ -120,10 +134,12 @@ header nav ul li a:hover::before {
 }
 
 footer {
-  background: linear-gradient(45deg, #6d5dfc, #00d4ff);
+  /* background: linear-gradient(45deg, #6d5dfc, #00d4ff); */
+  /* background: #121212; */
+  background: #1a1a2e;
   color: white;
   text-align: center;
-  padding: 2px 0;
+  padding: 10px 0;
   position: fixed;
   width: 100%;
   bottom: 0;
@@ -133,7 +149,8 @@ footer {
 }
 
 main {
-  padding: 60px 20px 80px; /* Add padding for header and footer */
+  padding-top: 100px;
+  padding-bottom: 80px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -198,7 +215,8 @@ button:hover {
   margin-bottom: 20px;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 1px 5px 10px #1cfdff;
+  box-shadow: 0px 0px 15px rgba(0, 212, 255, 0.6);
+  margin-top: 50px;
 }
 
 .contact-form {
@@ -233,6 +251,7 @@ button:hover {
 
   header nav ul li {
     margin: 10px 0;
+    
   }
 
   footer {
@@ -245,4 +264,5 @@ button:hover {
 
   
 }
+
 

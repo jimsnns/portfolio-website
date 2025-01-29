@@ -25,7 +25,7 @@ function Home() {
         </div>
       {/* </section> */}
     <Tabs />
-      <section className="projects">
+      <section className="projects projects-container">
         <h2>My Projects</h2>
         <div className="project-cards">
           <div className="card">
