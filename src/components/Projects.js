@@ -12,7 +12,7 @@ function Projects() {
     },
     {
       id: 2,
-      title: "Brats Machine Learning Predictor - Web Application",
+      title: "BraTS Machine Learning Predictor - Web Application",
       description: "A web application designed for the medical imaging community to predict and analyze brain tumors using MRI scans. This web application is designed in order to deploy my Brain Tumor Segmentation model.",
       github: "https://github.com/jimsnns/BraTS_ML_Predictor",
     }
@@ -21,7 +21,7 @@ function Projects() {
   return (
     <div className="projects-container projects-text ">
       <h1>My Projects</h1>
-      <p>You can check my <a href="https://github.com/jimsnns" target="_blank" rel="noopener noreferrer">GitHub repository</a> where you can find all my projects.</p>
+      <p>You can check my <a href="https://github.com/jimsnns" target="_blank" rel="noopener noreferrer">GitHub profile</a> where you can find all my projects in my repositories.</p>
       <p>Below you can see my most recent and most interesting projects.</p>
       
       <div className="projects-grid">

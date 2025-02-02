@@ -19,7 +19,7 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setStatus('Αποστολή...');
+    setStatus('Sending...');
 
     emailjs.send(
       process.env.REACT_APP_EMAILJS_SERVICE_ID,
@@ -32,11 +32,11 @@ function Contact() {
       process.env.REACT_APP_EMAILJS_PUBLIC_KEY
     )
     .then((response) => {
-      setStatus('Το μήνυμα στάλθηκε επιτυχώς! ');
+      setStatus('The message was successfully sent! ');
       setFormData({ name: '', email: '', message: '' });
     })
     .catch((error) => {
-      setStatus('Υπήρξε ένα σφάλμα. Παρακαλώ δοκιμάστε ξανά.');
+      setStatus('There was an error. Please try again.');
     });
   };
 
@@ -80,7 +80,7 @@ function Contact() {
         {status && (
           <div className="status-message">
             {status}
-            {status === 'Το μήνυμα στάλθηκε επιτυχώς! ' && (
+            {status === 'The message was successfully sent! ' && (
               <i className="fas fa-check-circle success-icon"></i>
             )}
           </div>

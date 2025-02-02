@@ -119,7 +119,7 @@ header nav ul li a::before {
   position: absolute;
   width: 100%;
   height: 2px;
-  bottom: -6px;
+  bottom: 5px;
   left: 0;
   background-color: #00d4ff;
   visibility: hidden;
