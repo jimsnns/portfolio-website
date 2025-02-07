@@ -10,9 +10,16 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: #1e1e2f;
-  color: #e0e0e0;
+  background: linear-gradient(to bottom, #002a44 30%, #000b17 100%);
+  color: white; 
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  
+  /* color: #e0e0e0; */
   font-family: 'Poppins', sans-serif; 
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -134,23 +141,20 @@ header nav ul li a:hover::before {
 }
 
 footer {
-  /* background: linear-gradient(45deg, #6d5dfc, #00d4ff); */
-  /* background: #121212; */
   background: #1a1a2e;
   color: white;
   text-align: center;
   padding: 10px 0;
-  position: fixed;
   width: 100%;
-  bottom: 0;
+  margin-top: auto;
   box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   font-family: 'Poppins', sans-serif; 
 }
 
 main {
+  min-height: calc(100vh - 100px); /* Αφαιρούμε το padding-bottom */
   padding-top: 100px;
-  padding-bottom: 80px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -263,6 +267,35 @@ button:hover {
   }
 
   
+}
+
+.scroll-animation {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-out;
+}
+
+.scroll-animation.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.6s ease-out;
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.6s ease-out;
+}
+
+.fade-in-left.active,
+.fade-in-right.active {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 
