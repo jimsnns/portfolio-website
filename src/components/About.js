@@ -21,7 +21,7 @@ function About() {
   
     <div className="about-container" data-aos="fade-up" data-aos-delay="100">
       <h1 data-aos="fade-in" data-aos-delay="100">About Me</h1>
-      <p data-aos="fade-in" >Hello! I'm Dimitris Sinanis, a creative Software Engineer with a passion for developing applications and 
+      <p data-aos="fade-in" >I am a creative Software Engineer with a passion for developing applications and 
         websites that improve the user experience. I specialize in developing dynamic websites using React, 
         JavaScript, and CSS, and have experience creating responsive designs that meet the needs of every user.</p>
       <p data-aos="fade-in" data-aos-delay="100" >I have worked with various clients to create modern websites and applications, and I always strive 

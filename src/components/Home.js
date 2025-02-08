@@ -2,8 +2,15 @@
 import React from 'react';
 import './Home.css';
 import Tabs from './Tabs';
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
+  const navigate = useNavigate();
+
+  const handleProjectClick = (projectId) => {
+    navigate(`/projects?selected=${projectId}`);
+  };
+
   return (
     <div className="home">
       {/* <section className="hero"> */}
@@ -31,15 +38,17 @@ function Home() {
       <section className="projects projects-container-home" data-aos="fade-up">
         <h2>My Projects</h2>
         <div className="project-cards" data-aos="fade-in" data-aos-delay="100">
-          <div className="card">
+          <div className="card" onClick={() => handleProjectClick('unet')}>
             <h3>Brain Tumor Image Segmentation Using U-Net</h3>
             <p>A project focused on segmenting brain tumors from MRI images using the U-Net architecture, with an emphasis on data preprocessing and normalization for improved machine learning model performance.</p>
           </div>
-          <div className="card">
+
+          <div className="card" onClick={() => handleProjectClick('webapp')}>
             <h3>Brain Tumor Prediction & Analysis Web Application</h3>
             <p>A Streamlit-based web app that allows medical professionals to upload and analyze MRI scans for brain tumor prediction and segmentation using deep learning.</p>
           </div>
-          <div className="card">
+
+          <div className="card" onClick={() => handleProjectClick('portfolio')}>
             <h3>My Portfolio Website</h3>
             <p>A personal portfolio website built with React to showcase my projects, skills, and experience, offering a responsive and user-friendly design.</p>
           </div>
