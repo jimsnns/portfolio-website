@@ -6,7 +6,7 @@
     height: auto;
     background:#1e1e2f;
     margin-top: 100;
-    margin: 100px auto;
+    margin: 80px auto;
     word-break: break-all;
     /* border: 1px solid rgba(0, 0, 0, 0.274); */
     font-family: 'Poppins', sans-serif; 
@@ -27,10 +27,12 @@
     padding: 10px 20px;
     text-align: center;
     width: 100%;
-    background: rgba(128, 128, 128, 0.075);
+    /* background: rgba(128, 128, 128, 0.075); */
+    background: linear-gradient(to bottom, #002a44 30%, #000b17 100%);
     cursor: pointer;
     box-sizing: content-box;
     border: 1px solid #ccc;
+    /* border: 1px solid rgba(255, 255, 255, 0.2); */
     position: relative;
     outline: none;
     margin: 0 1px 1px;
@@ -42,7 +44,7 @@
 
 .tabs:hover {
     background: linear-gradient(90deg, #4d4dff, #00ffff);
-    color: #fff;
+    /* color: #fff; */
     transform: translateY(-10px);
     transition: 0.3s ease-in-out;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -50,12 +52,8 @@
 
 .tab-button:hover {
     background: linear-gradient(90deg, #4d4dff, #00ffff);
-    color: #fff;
+    /* color: #fff; */
     transition: 0.3s ease-in-out;
-}
-
-.tabs:not(:last-child){
-    border-right: 1px solid white;
 }
 
 .active-tabs{
@@ -169,19 +167,22 @@ hr {
     color: white;
   }
   @media (max-width: 768px) {
-    header nav ul {
+    .container-tabs {
+      width: 90%;
+      margin: 40px auto;
+    }
+  
+    .bloc-tabs {
       flex-direction: column;
     }
   
-    header nav ul li {
-      margin: 10px 0;
+    .tabs {
+      margin: 5px 0;
+      padding: 8px 15px;
+      font-size: 16px;
     }
   
-    footer {
-      padding: 15px 0;
-    }
-  
-    main {
-      padding: 60px 10px 80px;
+    .content {
+      padding: 15px;
     }
   }

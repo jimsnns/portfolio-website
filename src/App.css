@@ -24,14 +24,12 @@ body {
 
 header {
   background: linear-gradient(45deg, #6d5dfc, #00d4ff);
-  color: white;
-  padding: 10px 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   z-index: 1000;
+  height: 60px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -42,11 +40,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
-  margin: 0 auto; /* Center the content */
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 100%;
 }
 
 .paragraph {
@@ -140,6 +141,17 @@ header nav ul li a:hover::before {
   transform: scaleX(1);
 }
 
+header nav ul li a.active {
+  color:white;
+}
+
+
+header nav ul li a.active::before {
+  visibility: visible;
+  transform: scaleX(1);
+  background-color: #00d4ff;
+}
+
 footer {
   background: #1a1a2e;
   color: white;
@@ -153,10 +165,12 @@ footer {
 }
 
 main {
-  min-height: calc(100vh - 100px); /* Αφαιρούμε το padding-bottom */
-  padding-top: 100px;
+  padding-top: 80px;
+  min-height: calc(100vh - 60px);
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 h1 {
@@ -180,17 +194,6 @@ button {
   font-weight: bold;
   font-size: 15px; 
 } 
-
-button:hover {
-  background: linear-gradient(45deg, #00d4ff, #6d5dfc);
-}
-
-
-
-button:hover {
-  background: linear-gradient(90deg, #2563eb, #3b82f6);
-  transform: scale(1.05);
-}
 
 .resume-button {
   background: none;
@@ -249,53 +252,85 @@ button:hover {
 }
 
 @media (max-width: 768px) {
-  header nav ul {
+  .mobile-menu-button {
+    display: block;
+    z-index: 1001;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(45deg, #6d5dfc, #00d4ff);
+    display: none;
+    z-index: 999;
+  }
+
+  nav.show {
+    display: block;
+  }
+
+  nav ul {
+    height: 100vh;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
   }
 
-  header nav ul li {
-    margin: 10px 0;
-    
+  nav ul li {
+    margin: 20px 0;
+    font-size: 24px;
   }
 
-  footer {
-    padding: 15px 0;
+  .nav_menu {
+    font-size: 20px;
+  }
+
+  .resume-button {
+    margin-top: 20px;
   }
 
   main {
-    padding: 60px 10px 80px;
+    padding-top: 60px;
   }
 
-  
+  .container-welcome {
+    padding-top: 20px;
+  }
+
+  /* Απόκρυψη του scrolling όταν το menu είναι ανοιχτό */
+  body.menu-open {
+    overflow: hidden;
+  }
 }
 
-.scroll-animation {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.6s ease-out;
+.mobile-menu-button {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 5px;
 }
 
-.scroll-animation.active {
-  opacity: 1;
-  transform: translateY(0);
-}
+@media (max-width: 768px) {
+  .mobile-menu-button {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 
-.fade-in-left {
-  opacity: 0;
-  transform: translateX(-50px);
-  transition: all 0.6s ease-out;
-}
-
-.fade-in-right {
-  opacity: 0;
-  transform: translateX(50px);
-  transition: all 0.6s ease-out;
-}
-
-.fade-in-left.active,
-.fade-in-right.active {
-  opacity: 1;
-  transform: translateX(0);
+  .header-content {
+    justify-content: space-between;
+    padding: 0 20px;
+  }
 }
 
 

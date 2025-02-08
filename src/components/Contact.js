@@ -41,7 +41,7 @@ function Contact() {
   };
 
   return (
-    <div className="contact">
+    <div className="contact" data-aos="fade-up" data-aos-delay="100">
       <h1>Contact Me</h1>
       <form onSubmit={handleSubmit}>
         <div className="form-group">

@@ -37,7 +37,7 @@ const Tabs = () => {
 
   return (
     <div>
-      <div className="container-tabs">
+      <div className="container-tabs" data-aos="fade-up">
         <div className="bloc-tabs">
           {tabsData.map(tab => (
             <button
@@ -50,7 +50,7 @@ const Tabs = () => {
           ))}
         </div>
       </div>
-      <div className="content-tabs">
+      <div className="content-tabs" data-aos="fade-up">
         {tabsData.map(tab => (
           toggleState === tab.id && (
             <div key={tab.id} className="content active-content">

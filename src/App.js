@@ -1,12 +1,13 @@
 // src/App.js
-import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { BrowserRouter as Router, Route, Link, Routes, NavLink } from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import './App.css';
-import { initScrollAnimations } from './ScrollAnimations';
 
 function handleClick()
 {
@@ -15,8 +16,32 @@ function handleClick()
 }
 
 function App() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+    if (!isMobileMenuOpen) {
+      document.body.classList.add('menu-open');
+    } else {
+      document.body.classList.remove('menu-open');
+    }
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+    document.body.classList.remove('menu-open');
+  };
+
   useEffect(() => {
-    initScrollAnimations();
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false
+    });
+    return () => {
+      document.body.classList.remove('menu-open');
+    };
   }, []);
 
   return (
@@ -27,28 +52,35 @@ function App() {
             <span className="logo">
               Dimitris Sinanis
             </span>
-            <nav>
+            <button 
+              className="mobile-menu-button" 
+              onClick={toggleMobileMenu}
+              aria-label="Toggle menu"
+            >
+              {isMobileMenuOpen ? '✕' : '☰'}
+            </button>
+            <nav className={isMobileMenuOpen ? 'show' : ''}>
               <ul>
                 <li>
-                  <Link to="/" className="nav_menu">01. Home</Link>
+                  <NavLink to="/" className="nav_menu" end onClick={closeMobileMenu}>01. Home</NavLink>
                 </li>
                 <li>
-                  <Link to="/about" className="nav_menu">02. About</Link>
+                  <NavLink to="/about" className="nav_menu" onClick={closeMobileMenu}>02. About</NavLink>
                 </li>
                 <li>
-                  <Link to="/projects" className="nav_menu">03. Projects</Link>
+                  <NavLink to="/projects" className="nav_menu" onClick={closeMobileMenu}>03. Projects</NavLink>
                 </li>
                 <li>
-                  <Link to="/contact" className="nav_menu">04. Contact</Link>
+                  <NavLink to="/contact" className="nav_menu" onClick={closeMobileMenu}>04. Contact</NavLink>
                 </li>
                 <li>
-                  <button className='resume-button' onClick={handleClick}>Resume</button>
+                  <button className='resume-button' onClick={() => { handleClick(); closeMobileMenu(); }}>Resume</button>
                 </li>
               </ul>
             </nav>
           </div>
         </header>
-        <main>
+        <main onClick={closeMobileMenu}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -63,6 +95,5 @@ function App() {
     </Router>
   );
 }
-
 
 export default App;

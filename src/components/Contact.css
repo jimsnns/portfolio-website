@@ -2,7 +2,7 @@
     max-width: 600px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     color: #e0e0e0;
-    animation: fadeIn 500ms ease-in-out;
+    /* animation: fadeIn 500ms ease-in-out; */
     margin: 0 auto;
     padding: 20px;
     background-color: #1e1e2f;
@@ -85,5 +85,21 @@
     margin-left: 8px;
     font-size: 1.2em;
     animation: fadeIn 500ms ease-in-out;
+  }
+  
+  @media (max-width: 768px) {
+    .contact {
+      margin: 20px 10px;
+      padding: 15px;
+    }
+
+    .form-group {
+      margin-right: 0;
+    }
+
+    button[type='submit'] {
+      padding: 12px;
+      font-size: 16px;
+    }
   }
   

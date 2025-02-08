@@ -5,7 +5,7 @@ import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const CustomLinkedInBadge = () => {
   return (
-    <div className="custom-linkedin-badge">
+    <div className="custom-linkedin-badge" data-aos="fade-in" data-aos-delay="100">
       <div className="badge-banner">
         <FontAwesomeIcon icon={faLinkedin} size="1.5x" color="#FFFFFF" className="linkedin-icon" />
         <span className="banner-text">Connect with Me</span>
