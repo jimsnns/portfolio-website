@@ -39,6 +39,10 @@ function App() {
       once: true,
       mirror: false
     });
+
+    // Scroll to top on route change
+    window.scrollTo(0, 0);
+
     return () => {
       document.body.classList.remove('menu-open');
     };

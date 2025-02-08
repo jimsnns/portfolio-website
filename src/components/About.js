@@ -5,11 +5,13 @@ import CustomLinkedInBadge from './CustomLinkedInBadge';
 function About() {
   useEffect(() => {
     // Δημιουργία script για το LinkedIn badge
+    window.scrollTo(0, 0);
     const script = document.createElement('script');
     script.src = 'https://platform.linkedin.com/badges/js/profile.js';
     script.async = true;
     script.defer = true;
     document.body.appendChild(script);
+
 
     // Καθαρισμός script για αποφυγή συγκρούσεων
     return () => {
