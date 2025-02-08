@@ -9,6 +9,10 @@ function Home() {
 
   const handleProjectClick = (projectId) => {
     navigate(`/projects?selected=${projectId}`);
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   };
 
   return (

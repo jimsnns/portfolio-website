@@ -7,6 +7,13 @@ function Projects() {
   const [searchParams, setSearchParams] = useSearchParams();
   const selectedProject = searchParams.get('selected');
 
+  React.useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }, [selectedProject]);
+
   const projectsList = [
     {
       id: 'unet',
@@ -42,7 +49,16 @@ function Projects() {
   };
 
   const handleProjectClick = (projectId) => {
-    if (!selectedProject) {
+    if (selectedProject) {
+      // Add exit animation class
+      const projectCard = document.querySelector('.project-card');
+      projectCard.classList.add('fadeOutScale');
+      
+      // Wait for animation to complete before updating state
+      setTimeout(() => {
+        setSearchParams({ selected: null });
+      }, 500); // Match animation duration
+    } else {
       setSearchParams({ selected: projectId });
     }
   };
@@ -77,9 +93,13 @@ function Projects() {
             key={project.id} 
             className={`project-card ${selectedProject === project.id ? 'expanded' : ''}`}
             onClick={() => handleProjectClick(project.id)}
-            style={{ cursor: selectedProject ? 'default' : 'pointer' }}
+            style={{ 
+              cursor: selectedProject ? 'default' : 'pointer',
+              animation: selectedProject === project.id ? 'fadeInScale 0.5s ease-out' : 'none'
+            }}
           >
             {!selectedProject && <div className="hover-message">Click to view</div>}
+
             <img 
               src={project.image} 
               alt={project.title}

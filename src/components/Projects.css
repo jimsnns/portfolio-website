@@ -189,36 +189,97 @@
 }
 
 .github-button:hover {
-  background: #008B8B;
+  background: linear-gradient(45deg, #6d5dfc, #00d4ff);
   color: #fff;
 }
 
 .single-project {
   grid-template-columns: 1fr;
-  max-width: 900px;
+  max-width: 900px auto;
   margin: 0 auto;
 }
 
-.project-card.expanded {
+/* .project-card.expanded {
   transform: scale(1);
   margin: 20px auto;
   max-width: 100%;
+} */
+
+.project-card.expanded:hover {
+  /* transform: translateY(-10px); */
+  /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); */
+  /* background: rgba(255, 255, 255, 0.15); */
 }
+
+
+
 
 .reset-button {
   background: rgba(0, 212, 255, 0.6);
-  color: #000;
+  color: white;
   padding: 10px 20px;
   border: none;
   border-radius: 10px;
   cursor: pointer;
   font-weight: bold;
   margin-bottom: 20px;
-  transition: 0.3s;
+  /* transition: 0.3s; */
 }
 
 .reset-button:hover {
-  background: #008B8B;
+  background: linear-gradient(45deg, #6d5dfc, #00d4ff);
   color: #fff;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeOutScale {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
+.fadeOutScale {
+  animation: fadeOutScale 0.5s ease-out forwards;
+}
+
+.single-project .project-card {
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Αφαιρούμε τα hover effects για το single project view */
+.single-project .project-card:hover {
+  transform: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.single-project .project-card img:hover {
+  transform: none;
+}
+
+/* Απενεργοποιούμε το hover message στο single project view */
+.single-project .project-card:hover .hover-message {
+  opacity: 0;
+}
+
+/* Απενεργοποιούμε το brightness effect στην εικόνα στο single project view */
+.single-project .project-card:hover .project-image {
+  filter: none;
 }
 
