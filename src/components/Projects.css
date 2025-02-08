@@ -16,7 +16,7 @@
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, calc(50% - 2rem)));
-  gap: 2rem;
+  gap: 4rem;
   padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -34,7 +34,7 @@
   text-decoration: none;
   color: white;
   display: block;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease, opacity 0.5s ease, transform 0.5s ease;
   box-shadow: 0px 0px 15px rgba(0, 212, 255, 0.6);
   border-radius: 10px;
   text-align: left;
@@ -281,5 +281,20 @@
 /* Απενεργοποιούμε το brightness effect στην εικόνα στο single project view */
 .single-project .project-card:hover .project-image {
   filter: none;
+}
+
+@keyframes minimize {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+
+.minimize {
+  animation: minimize 0.5s ease-out forwards;
 }
 

@@ -49,15 +49,17 @@ function Projects() {
   };
 
   const handleProjectClick = (projectId) => {
+    const projectCard = document.querySelector('.project-card');
+    
     if (selectedProject) {
-      // Add exit animation class
-      const projectCard = document.querySelector('.project-card');
-      projectCard.classList.add('fadeOutScale');
-      
-      // Wait for animation to complete before updating state
+      // Προσθέτουμε την κλάση minimize
+      projectCard.classList.add('minimize');
+
+      // Περιμένουμε να ολοκληρωθεί το animation πριν αλλάξουμε το state
       setTimeout(() => {
         setSearchParams({ selected: null });
-      }, 500); // Match animation duration
+        projectCard.classList.remove('minimize'); // Αφαιρούμε την κλάση
+      }, 500); // Χρόνος που ταιριάζει με τη διάρκεια του animation
     } else {
       setSearchParams({ selected: projectId });
     }
