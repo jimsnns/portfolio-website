@@ -268,18 +268,29 @@
   filter: none;
 }
 
-@keyframes minimize {
-  from {
-    opacity: 1;
-    transform: scale(1);
-  }
-  to {
-    opacity: 0;
-    transform: scale(0.5);
-  }
+/* .minimize {
+  animation: minimize 0.5s ease-in-out forwards;
 }
 
-.minimize {
-  animation: minimize 0.5s ease-out forwards;
+@keyframes minimize {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.9);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 0;
+    pointer-events: none;
+  }
+} */
+
+.fadeOut {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
 }
 

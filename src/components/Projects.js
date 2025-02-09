@@ -2,6 +2,7 @@
 import React from 'react';
 import './Projects.css';
 import { useSearchParams } from 'react-router-dom';
+import 'aos/dist/aos.css';
 
 function Projects() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -45,25 +46,34 @@ function Projects() {
   ];
 
   const handleReset = () => {
-    setSearchParams({});
+    const projectCard = document.querySelector('.expanded');
+    
+    if (projectCard) {
+      projectCard.classList.add('fadeOut');
+      
+      setTimeout(() => {
+        projectCard.classList.remove('fadeOut');
+        setSearchParams({});
+      }, 300);
+    }
   };
 
   const handleProjectClick = (projectId) => {
-    const projectCard = document.querySelector('.project-card');
-    
-    if (selectedProject) {
-      // Προσθέτουμε την κλάση minimize
-      projectCard.classList.add('minimize');
-
-      // Περιμένουμε να ολοκληρωθεί το animation πριν αλλάξουμε το state
-      setTimeout(() => {
-        setSearchParams({ selected: projectId });
-        projectCard.classList.remove('minimize'); // Αφαιρούμε την κλάση
-      }, 500); // Χρόνος που ταιριάζει με τη διάρκεια του animation
+    if (selectedProject === projectId) {
+      const projectCard = document.querySelector('.expanded'); // Βρίσκουμε το ενεργό project
+      
+      if (projectCard) {
+        projectCard.classList.add('fadeOut'); // Προσθέτουμε την κλάση minimize
+        
+        setTimeout(() => {
+          setSearchParams({}); // Αλλάζουμε το state αφού τελειώσει το animation
+        }, 300); // Ταιριάζουμε το χρόνο με το animation
+      }
     } else {
       setSearchParams({ selected: projectId });
     }
   };
+  
 
   return (
     <div className="projects-container projects-text" data-aos="fade-up" data-aos-delay="100">
@@ -82,7 +92,7 @@ function Projects() {
           web development, and software engineering:</p>
         </>
       ) : (
-        <button onClick={handleReset} className="reset-button">
+        <button onClick={handleReset} className="reset-button" data-aos="fade-in" data-aos-delay="100">
           ← Back to All Projects
         </button>
       )}
@@ -93,7 +103,7 @@ function Projects() {
           .map((project) => (
           <div 
             key={project.id} 
-            className={`project-card ${selectedProject === project.id ? 'expanded' : 'test'}`}
+            className={`project-card ${selectedProject === project.id ? 'expanded' : 'none'}`}
             onClick={() => handleProjectClick(project.id)}
             style={{ 
               cursor: selectedProject ? 'default' : 'pointer',

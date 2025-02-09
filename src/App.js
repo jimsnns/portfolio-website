@@ -15,6 +15,8 @@ function handleClick()
      return true;
 }
 
+window.scrollTo(0, 0);
+
 function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 

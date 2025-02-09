@@ -10,6 +10,7 @@ function Contact() {
     message: ''
   });
 
+  window.scrollTo(0, 0);
   const [status, setStatus] = useState('');
 
   const handleChange = (e) => {
