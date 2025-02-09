@@ -154,6 +154,28 @@
     color: #e0e0e0;
   }
   
+  .mouse {
+    width: 25px;
+    height: 40px;
+    border: 2px solid #e0e0e0;
+    border-radius: 60px;
+    position: relative;
+    /* overflow: hidden; */
+  }
+
+  .mouse-scroll {
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .mouse::after, .mouse::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-family: inherit;
+  }
+
   @media (max-width: 768px) {
     header nav ul {
       flex-direction: column;

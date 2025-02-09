@@ -27,20 +27,18 @@ function Home() {
 		        <div className="intro">
 			        {/* <img src="images/profile-picture.jpg" /> */}
               <span className='welcome' data-aos="fade-in" data-aos-delay="100">Welcome.</span>
-              <p className='paragraph' data-aos="fade-in" data-aos-delay="100">Hello! I'm Dimitris, a passionate Software Engineer currently working at Qualco. </p>
-              <p className='paragraph' data-aos="fade-in" data-aos-delay="100">With extensive expertise in SQL, C#, and Python, 
-                I am a versatile Software Engineer passionate about crafting innovative solutions. 
-                My technical journey spans from developing sophisticated machine learning models to 
-                building scalable enterprise applications. I excel in full-stack development, 
-                leveraging modern frameworks like React and Angular, while maintaining expertise in database optimization and 
-                system architecture. My approach combines analytical problem-solving with creative implementation, 
-                always striving for clean, efficient, and maintainable code that delivers exceptional user experiences.</p>
+              <p className='paragraph' data-aos="fade-in" data-aos-delay="100">👋 Hello! I’m Dimitris Sinanis, a Software Engineer at Qualco, with expertise in SQL, C#, Python, and Full-Stack Development. Also, I'm an AI Enthusiast.</p>
+              <p className='paragraph' data-aos="fade-in" data-aos-delay="100"> 🎯 What I Do:</p>
+              <p className='paragraph' data-aos="fade-in" data-aos-delay="100">✔️ Develop Machine Learning models & scalable enterprise applications.</p>
+              <p className='paragraph' data-aos="fade-in" data-aos-delay="100">✔️ Build with React, Angular for frontend & optimize databases & system architecture.</p>
+              <p className='paragraph' data-aos="fade-in" data-aos-delay="100">✔️ Blend analytical thinking with clean, efficient & maintainable code.</p>
+              {/* <div className='mouse' data-aos="fade-in" data-aos-delay="100"></div> */}
+                {/* <div className='.home-hero__mouse-scroll-cont' data-aos="fade-in" data-aos-delay="100"></div> */}
           {/* <button>Get Started</button> */}
             </div>
           </div>
         </div>
       {/* </section> */}
-    <Tabs />
       <section className="projects projects-container-home" data-aos="fade-up">
         <h2>My Projects</h2>
         <div className="project-cards" data-aos="fade-in" data-aos-delay="100">
@@ -60,6 +58,8 @@ function Home() {
           </div>
         </div>
       </section>
+      
+      <Tabs />
     </div>
   );
 }

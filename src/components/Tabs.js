@@ -2,30 +2,30 @@ import React, { useState } from "react";
 import './Tabs.css'
 
 const tabsData = [
-  { id: 1, title: "Education", content: [
-    "Hellenic Open University - MSc in Computer and Information Sciences",
-    "Piraeus University of Applied Sciences - BSc in Civil Engineering"
-    
-  ]},
-  { id: 2, title: "Experience", content: [
-    "Qualco: Software Engineer | Intelligent Decisions (12/2024 - Present)",
-    "Qualco: Software Support Engineer (8/2022 - 11/2024)",
-    "Euronet Worldwide: AS400 Programmer/ Data Analyst (10/2021 - 8/2022)",
-    "Viva Wallet: E-Commerce & Technical Support Specialist (3/2021 - 10/2021)",
-    "Piraeus Direct Solutions: Merchant Service/ Support (10/2017 - 2/2021)"
-    
-  ]},
-  { id: 3, title: "Skills", content: [
+  { id: 1, title: "Skills", content: [
     { name: "SQL", level: 90 },
     { name: "C# .Net Framework", level: 85 },
-    { name: "Python/ Tensorflow/ Anaconda (Machine Learning)", level: 75 },
+    { name: "Python/ Tensorflow/ Anaconda (Machine Learning)", level: 80 },
     { name: "HTML", level: 80 },
     { name: "CSS", level: 90 },
     { name: "JavaScript", level: 85 },
     { name: "TypeScript", level: 75 },
     { name: "React", level: 85 },
     { name: "Angular", level: 70 }
-  ]}
+  ]},
+  { id: 2, title: "Work Experience", content: [
+    "Qualco: Software Engineer | Intelligent Decisions (12/2024 - Present)",
+    "Qualco: Software Support Engineer (8/2022 - 11/2024)",
+    "Euronet Worldwide: AS400 Programmer/ Data Analyst (10/2021 - 8/2022)",
+    "Viva Wallet: E-Commerce & Technical Support Specialist (3/2021 - 10/2021)",
+    "Piraeus Direct Solutions: Merchant Service/ Support (10/2017 - 2/2021)"
+  ]},
+  { id: 3, title: "Education", content: [
+    "Hellenic Open University - MSc in Computer and Information Sciences",
+    "Piraeus University of Applied Sciences - BSc in Civil Engineering"
+    
+  ]},
+
 ];
 
 const Tabs = () => {
@@ -37,7 +37,7 @@ const Tabs = () => {
 
   return (
     <div>
-      <div className="container-tabs" data-aos="fade-up">
+      <div className="container-tabs" data-aos="fade-up" data-aos-delay="100">
         <div className="bloc-tabs">
           {tabsData.map(tab => (
             <button
@@ -50,13 +50,13 @@ const Tabs = () => {
           ))}
         </div>
       </div>
-      <div className="content-tabs" data-aos="fade-up">
+      <div className="content-tabs" data-aos="fade-up" data-aos-delay="100">
         {tabsData.map(tab => (
           toggleState === tab.id && (
-            <div key={tab.id} className="content active-content">
+            <div key={tab.id} className="content active-content" data-aos="fade-in" data-aos-delay="100">
               <h1>{tab.title}</h1>
               <hr />
-              {tab.id === 3 ? ( // Αν είναι η καρτέλα Skills
+              {tab.id === 1 ? ( // Αν είναι η καρτέλα Skills
                 <ul className="skills-list">
                   {tab.content.map((skill, index) => (
                     <li key={index} className="skill-item">

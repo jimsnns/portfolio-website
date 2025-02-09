@@ -4,9 +4,8 @@
     position: relative;
     width: 800;
     height: auto;
-    background:#1e1e2f;
     margin-top: 100;
-    margin: 80px auto;
+    margin: 60px auto;
     word-break: break-all;
     /* border: 1px solid rgba(0, 0, 0, 0.274); */
     font-family: 'Poppins', sans-serif; 
@@ -81,7 +80,7 @@
     position: center;
     box-sizing: content-box;
     text-align: left;
-    animation: fadeIn 500ms ease-in-out;
+    /* animation: fadeIn 500ms ease-in-out; */
 }
 
 .content h2{
@@ -116,6 +115,7 @@ h1 {
     display: block;
     font-family: 'Poppins', sans-serif; 
     line-height: 2;
+    margin-bottom: 100px;
     
 }
 
@@ -136,17 +136,19 @@ hr {
   .skills-list {
     list-style: none;
     padding: 0;
+    /* margin: 80px auto; */
   }
   
   .skill-item {
-    margin: 10px 0;
+    margin: 15px 0;
     font-weight: bold;
+    animation: fadeIn 500ms ease-in-out; 
   }
   
   .progress-bar {
     width: 100%;
     height: 15px;
-    background: #1e293b;
+    background: linear-gradient(to bottom, #002a44 30%, #000b17 100%);
     border-radius: 10px;
     overflow: hidden;
     position: relative;
