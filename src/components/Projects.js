@@ -37,7 +37,7 @@ function Projects() {
       id: 'portfolio',
       title: "My Portfolio Website",
       description1: "This portfolio website is built with React and deployed on Vercel, showcasing my projects, skills, and expertise as a Software Engineer. Designed with a responsive and user-friendly interface, it ensures a seamless browsing experience across all devices.",
-      description2: "The website is designed to be responsive and easy to navigate, providing a seamless experience for visitors.",
+      // description2: "The website is designed to be responsive and easy to navigate, providing a seamless experience for visitors.",
       description3: "Explore the project on GitHub for more details.",
       github: "https://github.com/jimsnns/Portfolio-Website",
       image: "portfolio_website.gif"
@@ -57,7 +57,7 @@ function Projects() {
 
       // Περιμένουμε να ολοκληρωθεί το animation πριν αλλάξουμε το state
       setTimeout(() => {
-        setSearchParams({ selected: null });
+        setSearchParams({ selected: projectId });
         projectCard.classList.remove('minimize'); // Αφαιρούμε την κλάση
       }, 500); // Χρόνος που ταιριάζει με τη διάρκεια του animation
     } else {
@@ -93,7 +93,7 @@ function Projects() {
           .map((project) => (
           <div 
             key={project.id} 
-            className={`project-card ${selectedProject === project.id ? 'expanded' : ''}`}
+            className={`project-card ${selectedProject === project.id ? 'expanded' : 'test'}`}
             onClick={() => handleProjectClick(project.id)}
             style={{ 
               cursor: selectedProject ? 'default' : 'pointer',
@@ -102,12 +102,13 @@ function Projects() {
           >
             {!selectedProject && <div className="hover-message">Click to view</div>}
 
+
+            <h3>{project.title}</h3>
             <img 
               src={project.image} 
               alt={project.title}
               className="project-image"
             />
-            <h3>{project.title}</h3>
             <p>{project.description1}</p>
             <p>{project.description2}</p>
             <p>{project.description3}</p>

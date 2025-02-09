@@ -185,7 +185,7 @@
   border-radius: 10px;
   text-decoration: none;
   font-weight: bold;
-  transition: 0.3s;
+  /* transition: 0.3s; */
 }
 
 .github-button:hover {
