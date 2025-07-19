@@ -11,7 +11,7 @@ import './App.css';
 
 function handleClick()
 {
-     window.open("/CV_Dimitris Sinanis_1.pdf","_blank");
+     window.open("/CV_Dimitris Sinanis.pdf","_blank");
      return true;
 }
 
